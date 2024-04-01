@@ -1,0 +1,650 @@
+@charset "UTF-8";
+
+/*---Reset---*/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+img,
+form,
+table,
+tr,
+th,
+td {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 100%;
+	text-align: left;
+	list-style-type: none;
+	border-collapse: collapse;
+}
+
+textarea {
+	font-size: 100%;
+	vertical-align: middle;
+}
+
+hr {
+	display: none;
+}
+
+em {
+	font-style: normal
+}
+
+input {
+	line-height: auto;
+	vertical-align: middle;
+}
+
+strong.more {
+	color: #c30
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Ｐゴシック', sans-serif;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.alert {
+	position: relative;
+	top: 0;
+	width: 100%;
+	background-color: black;
+	text-align: center;
+	padding: 18px;
+	color: white;
+	font-size: 14px;
+	z-index: 1;
+	box-shadow: 5px 5px 5px 680px rgba(180, 180, 180, 0.3);
+}
+
+.alert a {
+	text-decoration: underline;
+	color: white;
+}
+
+header {
+	position: relative;
+	width: 100%;
+	min-height: 680px;
+	background-size: cover;
+	background-position: center;
+	background-image: url(../cafe/img/eyecatch.jpg);
+}
+
+.concept {
+	width: 90%;
+	margin: auto;
+	position: absolute;
+	top: 250px;
+	left: 5%;
+	color: white;
+	font-size: 64px;
+	line-height: 64px;
+	font-weight: bold;
+}
+
+header nav {
+	position: relative;
+	top: 0;
+	margin: auto;
+	width: 100%;
+	padding: 0 5%;
+	background-color: transparent;
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 15px;
+	color: white;
+	transition: all .5s ease;
+}
+
+.logo {
+	flex: 25%;
+	color: white;
+	font-weight: bold;
+	font-size: 32px;
+}
+
+header nav .logo img {
+	vertical-align: middle;
+}
+
+.g_nav {
+	flex: 50%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	line-height: 50px;
+}
+
+.g_nav .menu {
+	padding: 0 25px;
+	cursor: pointer;
+}
+
+.g_nav .menu a {
+	color: white;
+}
+
+header nav .sign {
+	flex: 25%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	line-height: 50px;
+}
+
+.signin {
+	cursor: pointer;
+}
+
+.sp {
+	display: none;
+}
+
+section {
+	margin: 40px;
+	padding: 0 5%;
+}
+
+.introduction {
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.box {
+	padding: 10px 0;
+}
+
+.introduction .info {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.introduction .photo {
+	width: 64px;
+	height: 64px;
+}
+
+.photo img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 8px;
+}
+
+.access {
+	padding: 5px 15px;
+}
+
+.access .area {
+	font-weight: bold;
+}
+
+section p {
+	font-size: 14px;
+	font-weight: 900;
+}
+
+.bg_white {
+	background-color: white;
+	color: black;
+}
+
+section h2 {
+	font-size: 32px;
+	font-weight: bold;
+}
+
+.cafe_local {
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	column-gap: 15px;
+}
+
+.cafe_local .text {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.goto {
+	margin-top: 40px;
+	opacity: 0.9;
+	position: relative;
+}
+
+.goto_text {
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	background-color: rgba(255, 255, 255, 0.3);
+	padding: 10px;
+}
+
+.goto_text h3 {
+	font-size: 42px;
+	font-weight: bold;
+	color: black;
+}
+
+.goto_text p {
+	font-size: 18px;
+	font-weight: 100;
+	color: black;
+}
+
+.goto img {
+	width: 100%;
+	border-radius: 16px;
+}
+
+.bg_black {
+	background-color: black;
+	color: white;
+	padding: 40px 5%;
+}
+
+.cafe_exp {
+	margin: 15px auto 0 auto;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 15px;
+}
+
+.cafe_host {
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 15px;
+}
+
+footer {
+	border-top: 1px solid #ddd;
+	background-color: #f7f7f7;
+	padding: 4% 0;
+}
+
+.outer {
+	width: 90%;
+	margin: auto;
+	font-size: 0.9rem;
+}
+
+.nav_area {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.inner li {
+	margin: 1rem 0;
+}
+
+.inner a {
+	color: #333;
+}
+
+.reserved {
+	padding-top: 2%;
+	color: #333;
+	border-top: 1px solid #ccc;
+}
+
+.jump {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	height: 3rem;
+	line-height: 3rem;
+	color: white;
+	text-align: center;
+	cursor: pointer;
+	background-color: black;
+	padding: 0 10px;
+	transition: all .3s ease;
+}
+
+.fixed-nav {
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 2;
+	position: fixed;
+	top: 0;
+	transition: all .5s ease;
+}
+
+#overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 999;
+}
+
+#signin_box {
+	background-color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 0px;
+	border-radius: 12px;
+	text-align: center;
+	width: 40%;
+}
+
+#signin_box h2 {
+	font-size: 1.2rem;
+	font-weight: bold;
+	text-align: center;
+	padding: 1rem 0;
+	border-bottom: 1px solid #ccc;
+}
+
+#signin_box dl {
+	padding: 20px;
+}
+
+#signin_box dd {
+	padding: 5px 0;
+}
+
+#signin_box dd input {
+	width: 100%;
+	font-size: 1.2rem;
+	padding: 10px 2.5px;
+	border-radius: 8px;
+	border: 1px solid #aaa;
+}
+
+#signin_box dd button {
+	color: white;
+	background-color: rgb(215, 4, 102);
+	width: 100%;
+	font-size: 1.2rem;
+	padding: 10px 2.5px;
+	border: 0;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+#signin_box dl.sns {
+	border-width: 90%;
+	border-top: 1px solid #ccc;
+}
+
+#signin_box .sns dd img {
+	width: 1.5rem;
+}
+
+#signin_box .sns dd button {
+	color: black;
+	background-color: white;
+	width: 100%;
+	font-size: 1.2rem;
+	padding: 10px 2.5px;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+}
+
+
+.contact-header {
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+	background-image: none;
+	height: 70px;
+}
+
+.contact_box {
+	width: 70%;
+	margin: 5% auto;
+	border-radius: 16px;
+	border: 1px solid #ccc;
+}
+
+.contact_box form {
+	margin: 3%;
+}
+
+.contact_box p {
+	font-weight: normal;
+}
+
+.contact_box .required {
+	color: red;
+}
+
+.contact_box h2 {
+	font-size: 1.2rem;
+	font-weight: bold;
+	text-align: center;
+	padding: 1rem 0;
+	border-bottom: 1px solid #ccc;
+}
+
+.contact_box h3 {
+	background: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#eaeaea));
+	border-top: 1px solid #666;
+	border-bottom: 1px solid #666;
+	padding: 1%;
+	margin: 1% 0;
+}
+
+.contact_box dl {
+	margin: 2% 0;
+}
+
+.contact_box dd {
+	padding: 0.5% 0 1%;
+	font-size: 1.2rem;
+}
+
+.contact_box dd.error {
+	padding: 0;
+	color: red;
+	font-size: 1rem;
+}
+
+.contact_box input {
+	width: 100%;
+	font-size: 1.2rem;
+	padding: 10px 2.5px;
+	border-radius: 8px;
+	border: 1px solid #aaa;
+}
+
+.contact_box textarea {
+	resize: none;
+	width: 100%;
+	height: 33vh;
+	font-size: 1.2rem;
+	padding: 10px 2.5px;
+	border-radius: 8px;
+	border: 1px solid #aaa;
+}
+
+.contact_box button {
+	color: white;
+	background-color: rgb(215, 4, 102);
+	width: 100%;
+	font-size: 1.2rem;
+	padding: 10px 2.5px;
+	border: 0;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.contact_box .confirm dt {
+	margin-top: 1rem;
+	border-bottom: 1px solid #ccc;
+}
+
+.contact_box .confirm dd {
+	padding: 1%;
+}
+
+.contact_box .confirm dd.confirm_btn {
+	padding: 1% 0;
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.contact_box .confirm dd.confirm_btn button {
+	margin-right: 10px;
+}
+
+.contact_box .confirm dd.confirm_btn a {
+	width: 100%;
+	text-align: center;
+	line-height: 40px;
+	margin-left: 10px;
+	background-color: transparent;
+	border: 2px solid #066;
+	border-radius: 8px;
+	cursor: pointer;
+	color: #066;
+}
+
+.complete_msg {
+	padding: 3%;
+}
+
+.complete_msg a {
+	display: block;
+	margin-top: 10px;
+	text-decoration: underline;
+}
+
+
+header nav .sp {
+	display: none;
+}
+
+header nav .sp_nav {
+	position: fixed;
+	top: 125px;
+	width: 12.5rem;
+	background-color: white;
+	border-radius: 8px;
+}
+
+header nav .sp_nav a {
+	color: black;
+}
+
+header nav .sp_menu {
+	color: black;
+	padding: 0 1rem;
+	cursor: pointer;
+}
+
+header nav .sp_signin {
+	color: black;
+	padding: 0 1rem;
+	border-bottom: 1px solid #ccc;
+	cursor: pointer;
+}
+
+.sp ._click {
+	pointer-events: auto;
+}
+
+
+header.contact-header nav.fixed-nav {
+	position: relative;
+}
+
+
+.form_data {
+	background-color: rgba(253, 210, 186, 0.5);
+	font-size: 14px;
+
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid black;
+	font-size: 14px;
+}
+
+th, td {
+  padding: 4px;
+  text-align: left;
+	border: 1px solid black;
+}
+
+.edit_title {
+	font-size: 30px;
+	margin: 10px;
+	text-align: center;
+}
+
+.edit_button {
+	margin: 10px;
+}
+
+.edit_form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: left;
+}
+
+.edit_row {
+	display: flex;
+	align-items: flex-start; /* inputの開始地点を縦一列に揃える */
+	margin: 10px;
+}
+
+.edit_label {
+	flex: 1;
+	text-align: right;
+	margin-right: 10px;
+	font-size: 20px;
+	white-space: nowrap; /* labelの文字を折り返さない */
+}
+
+.edit_input,
+.edit_textarea {
+	flex: 2;
+	width: 100%;
+}
+
+.edit_textarea {
+	resize: vertical;
+}
