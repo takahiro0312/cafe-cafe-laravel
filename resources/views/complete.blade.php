@@ -1,37 +1,4 @@
-<?php
-session_start();
 
-if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
-
-  
-}
-
-
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
-  try {
-
-      require 'config.blade.php';
-
-      $sql = "INSERT INTO contacts (name, kana, tel, email, body) VALUES (:name, :kana, :tel, :email, :body)";
-      $stmt = $PDO->prepare($sql);
-
-      $stmt->bindValue(':name', $_SESSION['name'], PDO::PARAM_STR);
-      $stmt->bindValue(':kana', $_SESSION['kana'], PDO::PARAM_STR);
-      $stmt->bindValue(':tel', $_SESSION['tel'], PDO::PARAM_STR);
-      $stmt->bindValue(':email', $_SESSION['email'], PDO::PARAM_STR);
-      $stmt->bindValue(':body', $_SESSION['body'], PDO::PARAM_STR);
-
-      $stmt->execute();
-
-      session_destroy();
-
-      header("Location: complete.blade.php");
-      exit;
-  } catch (PDOException $e) {
-      exit('データベースに接続できませんでした。' . $e->getMessage());
-  }
-}
-?>
 
 <!DOCTYPE html>
 <html lang="ja">

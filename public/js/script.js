@@ -132,7 +132,7 @@ window.addEventListener('DOMContentLoaded', function () {
   const nav = document.querySelector('nav');
   const currentPage = window.location.pathname;
 
-  if (currentPage.includes('contact.php') || currentPage.includes('confirm.php') || currentPage.includes('complete.php')) {
+  if (currentPage.includes('contact.blade.php') || currentPage.includes('confirm.blade.php') || currentPage.includes('complete.blade.php')) {
     nav.classList.add('fixed-nav');
   }
 });

@@ -21,7 +21,6 @@ if (isset($_GET['id'])) {
         if (!$contact) {
             exit('指定されたIDが見つかりません');
         }
-
     } catch (PDOException $e) {
 
         $PDO->rollBack();
@@ -45,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
 
         $stmt->execute();
 
-        
+
         $PDO->commit();
 
         session_destroy();
@@ -61,16 +60,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
 
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <title>編集</title>
 </head>
+
 <body>
     <h1 class="edit_title">編集</h1>
     <form class="edit_form" method="POST" action="">
-
+        @csrf
         <div class="edit_row">
             <label class="edit_label" for="name">名前:</label>
             <input class="edit_input" type="text" id="name" name="name" value="<?= htmlspecialchars($contact['name']) ?>" required>
@@ -99,4 +100,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
         <input class="edit_button" type="submit" name="submit" value="更新">
     </form>
 </body>
+
 </html>

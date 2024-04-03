@@ -55,16 +55,16 @@ function stopEvent(e) {
 
 
 
-if (window.location.href.indexOf('contact.php') !== -1) {
+if (window.location.href.indexOf('contact.blade.php') !== -1) {
   const introLink = document.getElementById('introLink');
   const experienceLink = document.getElementById('experienceLink');
   const introLink2 = document.getElementById('introLink2');
   const experienceLink2 = document.getElementById('experienceLink2');
 
-  introLink.innerHTML = `<a href="index.php#to_intro">はじめに</a>`;
-  experienceLink.innerHTML = `<a href="index.php#to_black">体験</a>`;
-  introLink2.innerHTML = `<a href="index.php#to_intro">はじめに</a>`;
-  experienceLink2.innerHTML = `<a href="index.php#to_black">体験</a>`;
+  introLink.innerHTML = `<a href="index.blade.php#to_intro">はじめに</a>`;
+  experienceLink.innerHTML = `<a href="index.blade.php#to_black">体験</a>`;
+  introLink2.innerHTML = `<a href="index.blade.php#to_intro">はじめに</a>`;
+  experienceLink2.innerHTML = `<a href="index.blade.php#to_black">体験</a>`;
 }
 
 
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const currentPage = window.location.pathname;
 
 
-  if (currentPage.includes('contact.php') || currentPage.includes('confirm.php') || currentPage.includes('complete.php')) {
+  if (currentPage.includes('contact.blade.php') || currentPage.includes('confirm.blade.php') || currentPage.includes('complete.blade.php')) {
     nav.classList.add('fixed-nav');
   }
 
